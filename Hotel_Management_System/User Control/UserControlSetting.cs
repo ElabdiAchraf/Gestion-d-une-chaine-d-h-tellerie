@@ -14,7 +14,7 @@ namespace Hotel_Management_System.User_Control
     public partial class UserControlSetting : UserControl
     {
 
-        static string strConnString = "server=localhost;port=5432;user id=postgres;password=saad;database=Hotel_Management_System";
+        static string strConnString = "server=localhost;port=5432;user id=postgres;password=postgresPW;database=postgresDB";
         //NpgsqlConnection db;
         n.NpgsqlConnection cnx = new n.NpgsqlConnection(strConnString);
         n.NpgsqlCommand cmd;
@@ -37,8 +37,8 @@ namespace Hotel_Management_System.User_Control
         }
         public void Clear1()
         {
-            textBoxUsername1.Clear();
-            textBoxPassword1.Clear();
+            textBoxUsername.Clear();
+            textBoxPassword.Clear();
             ID = "";
         }
 
@@ -72,15 +72,15 @@ namespace Hotel_Management_System.User_Control
            
             if(ID != "")
             {
-                if (textBoxUsername1.Text.Trim() == string.Empty || textBoxPassword1.Text.Trim() == string.Empty)
+                if (textBoxUsername.Text.Trim() == string.Empty || textBoxPassword.Text.Trim() == string.Empty)
                     MessageBox.Show("Please fill out all fields .", "Require All fields",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     cmd = new n.NpgsqlCommand();
                     cmd.Connection = cnx;
                     cmd.CommandText = "UPDATE public.users SET username = @usernamee , userpassword = @passwordd WHERE userid = "+ID+";";
-                    cmd.Parameters.AddWithValue("usernamee", textBoxUsername1.Text);
-                    cmd.Parameters.AddWithValue("passwordd", textBoxPassword1.Text);
+                    cmd.Parameters.AddWithValue("usernamee", textBoxUsername.Text);
+                    cmd.Parameters.AddWithValue("passwordd", textBoxPassword.Text);
 
                     cmd.Prepare();
 
@@ -161,7 +161,7 @@ namespace Hotel_Management_System.User_Control
         {
             if (ID != "")
             {
-                if (textBoxUsername1.Text.Trim() == string.Empty || textBoxPassword1.Text.Trim() == string.Empty)
+                if (textBoxUsername.Text.Trim() == string.Empty || textBoxPassword.Text.Trim() == string.Empty)
                     MessageBox.Show("Please fill out all fields .", "Require All fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
@@ -171,8 +171,8 @@ namespace Hotel_Management_System.User_Control
                         cmd = new n.NpgsqlCommand();
                         cmd.Connection = cnx;
                         cmd.CommandText = "DELETE FROM public.users WHERE userid = " + ID + ";";
-                        cmd.Parameters.AddWithValue("usernamee", textBoxUsername1.Text);
-                        cmd.Parameters.AddWithValue("passwordd", textBoxPassword1.Text);
+                        cmd.Parameters.AddWithValue("usernamee", textBoxUsername.Text);
+                        cmd.Parameters.AddWithValue("passwordd", textBoxPassword.Text);
 
                         cmd.Prepare();
 
@@ -197,8 +197,8 @@ namespace Hotel_Management_System.User_Control
             {
                 DataGridViewRow row = dataGridViewUser.Rows[e.RowIndex];
                 ID = row.Cells[0].Value.ToString();
-                textBoxUsername1.Text = row.Cells[1].Value.ToString();
-                textBoxPassword1.Text = row.Cells[2].Value.ToString();
+                textBoxUsername.Text = row.Cells[1].Value.ToString();
+                textBoxPassword.Text = row.Cells[2].Value.ToString();
             }
         }
 
@@ -214,6 +214,41 @@ namespace Hotel_Management_System.User_Control
             ada.Fill(dt);
             dataGridViewUser.DataSource = dt;
 
+
+        }
+
+        private void textBoxIdReservation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGetReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPageUpdateAndDeleteUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

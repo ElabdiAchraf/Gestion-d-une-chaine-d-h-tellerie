@@ -13,7 +13,7 @@ namespace Hotel_Management_System.User_Control
 {
     public partial class UserControlDashboard : UserControl
     {
-        static string strConnString = "server=localhost;port=5432;user id=postgres;password=saad;database=Hotel_Management_System";
+        static string strConnString = "server=localhost;port=5432;user id=postgres;password=postgresPW;database=postgresDB";
         //NpgsqlConnection db;
         n.NpgsqlConnection cnx = new n.NpgsqlConnection(strConnString);
         n.NpgsqlCommand cmd;
@@ -51,7 +51,7 @@ namespace Hotel_Management_System.User_Control
             cmd.Connection = cnx;
             cmd.CommandText = "SELECT COUNT(*) FROM public.rooms WHERE freeroom='YES';";
             string result = cmd.ExecuteScalar().ToString();
-            labelFreeRoom.Text = result;
+            labelFreeRoom.Text = " Free Rooms   "+ result;
         }
 
         public void ReservedRooms1()
@@ -60,7 +60,7 @@ namespace Hotel_Management_System.User_Control
             cmd.Connection = cnx;
             cmd.CommandText = "SELECT COUNT(*) FROM public.rooms WHERE freeroom='NO';";
             string result = cmd.ExecuteScalar().ToString();
-            labelRooms.Text = result;
+            labelRooms.Text = "Rooms   " + result;
         }
 
         public void Clients()
@@ -69,7 +69,7 @@ namespace Hotel_Management_System.User_Control
             cmd.Connection = cnx;
             cmd.CommandText = "SELECT COUNT(*) FROM public.clients";
             string result = cmd.ExecuteScalar().ToString();
-            labelClientCount.Text = result;
+            labelClientCount.Text = "clients   "+ result;
         }
 
         private void UserControlDashboard_Load(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace Hotel_Management_System.User_Control
                 Clients();
 
             }
-            else if (comboBoxHotel.Text == "Errachidia")
+            else if (comboBoxHotel.Text == "safi")
             {
                 FreeRooms(5);
                 ReservedRooms(5);
@@ -154,6 +154,21 @@ namespace Hotel_Management_System.User_Control
             FreeRooms1();
             ReservedRooms1();
             Clients();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e )
+        {
+            
+        }
+
+        private void labelFreeRoom_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

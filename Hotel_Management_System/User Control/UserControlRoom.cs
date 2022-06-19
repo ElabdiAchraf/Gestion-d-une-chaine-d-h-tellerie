@@ -14,8 +14,7 @@ namespace Hotel_Management_System.User_Control
     public partial class UserControlRoom : UserControl
     {
 
-        static string strConnString = "server=localhost;port=5432;user id=postgres;password=saad;database=Hotel_Management_System";
-        //NpgsqlConnection db;
+        static string strConnString = "server=localhost;port=5432;user id=postgres;password=postgresPW;database=postgresDB";        //NpgsqlConnection db;
         n.NpgsqlConnection cnx = new n.NpgsqlConnection(strConnString);
         n.NpgsqlCommand cmd;
         n.NpgsqlDataAdapter ada;
@@ -149,6 +148,92 @@ namespace Hotel_Management_System.User_Control
             ada = new n.NpgsqlDataAdapter(cmd);
             ada.Fill(dt);
             dataGridViewCat.DataSource = dt;
+        }
+
+        private void tabPageSearchRooms_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (comboBoxHotel.SelectedIndex == -1)
+                MessageBox.Show("Please fill out all fields", "Require all field", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                dt = new DataTable();
+                cmd = new n.NpgsqlCommand();
+                cmd.Connection = cnx;
+                // cmd.CommandText = "SELECT * FROM public.clients";
+                // ada = new n.NpgsqlDataAdapter(cmd);
+                // ada.Fill(dt);
+                // dataGridViewUser.DataSource = dt;
+                if (comboBoxHotel.Text == "Tanger")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 1;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+                else if (comboBoxHotel.Text == "Casablanca")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 2;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+                else if (comboBoxHotel.Text == "Khouribga")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 3;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+                else if (comboBoxHotel.Text == "Marrakech")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 4;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+                else if (comboBoxHotel.Text == "Errachidia")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 5;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+                else if (comboBoxHotel.Text == "Tetouan")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 6;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+                else if (comboBoxHotel.Text == "Essaouira")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 7;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+                else if (comboBoxHotel.Text == "Rabat")
+                {
+                    cmd.CommandText = "SELECT idroom, phoneroom, categories.cat, hotels.namehotel , freeroom FROM public.rooms JOIN public.hotels ON rooms.idhotel = hotels.idhotel JOIN public.categories ON rooms.idcat = categories.idcat  WHERE rooms.idhotel = 8;";
+                    ada = new n.NpgsqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    dataGridViewRooms.DataSource = dt;
+
+                }
+            }
+
         }
     }
 }

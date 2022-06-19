@@ -30,7 +30,8 @@
         {
             this.tabControlRoom = new System.Windows.Forms.TabControl();
             this.tabPageSearchRooms = new System.Windows.Forms.TabPage();
-            this.buttonSearchRoom = new System.Windows.Forms.Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.comboBoxHotel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dataGridViewRooms = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,14 +40,13 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxHotel = new System.Windows.Forms.ComboBox();
             this.tabPageHotel = new System.Windows.Forms.TabPage();
-            this.tabPagecat = new System.Windows.Forms.TabPage();
             this.dataGridViewHotels = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPagecat = new System.Windows.Forms.TabPage();
             this.dataGridViewCat = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,8 +55,8 @@
             this.tabPageSearchRooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).BeginInit();
             this.tabPageHotel.SuspendLayout();
-            this.tabPagecat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHotels)).BeginInit();
+            this.tabPagecat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,11 +75,11 @@
             // 
             // tabPageSearchRooms
             // 
-            this.tabPageSearchRooms.Controls.Add(this.buttonSearchRoom);
+            this.tabPageSearchRooms.Controls.Add(this.guna2Button1);
+            this.tabPageSearchRooms.Controls.Add(this.comboBoxHotel);
             this.tabPageSearchRooms.Controls.Add(this.dataGridViewRooms);
             this.tabPageSearchRooms.Controls.Add(this.label2);
             this.tabPageSearchRooms.Controls.Add(this.label1);
-            this.tabPageSearchRooms.Controls.Add(this.comboBoxHotel);
             this.tabPageSearchRooms.Location = new System.Drawing.Point(4, 4);
             this.tabPageSearchRooms.Name = "tabPageSearchRooms";
             this.tabPageSearchRooms.Padding = new System.Windows.Forms.Padding(3);
@@ -87,23 +87,49 @@
             this.tabPageSearchRooms.TabIndex = 0;
             this.tabPageSearchRooms.Text = "Search Rooms";
             this.tabPageSearchRooms.UseVisualStyleBackColor = true;
+            this.tabPageSearchRooms.Click += new System.EventHandler(this.tabPageSearchRooms_Click);
             // 
-            // buttonSearchRoom
+            // guna2Button1
             // 
-            this.buttonSearchRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSearchRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.buttonSearchRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSearchRoom.FlatAppearance.BorderSize = 0;
-            this.buttonSearchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearchRoom.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearchRoom.ForeColor = System.Drawing.Color.White;
-            this.buttonSearchRoom.Location = new System.Drawing.Point(382, 34);
-            this.buttonSearchRoom.Name = "buttonSearchRoom";
-            this.buttonSearchRoom.Size = new System.Drawing.Size(123, 34);
-            this.buttonSearchRoom.TabIndex = 12;
-            this.buttonSearchRoom.Text = "Search";
-            this.buttonSearchRoom.UseVisualStyleBackColor = false;
-            this.buttonSearchRoom.Click += new System.EventHandler(this.buttonSearchRoom_Click);
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(540, 25);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(158, 36);
+            this.guna2Button1.TabIndex = 33;
+            this.guna2Button1.Text = "search";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // comboBoxHotel
+            // 
+            this.comboBoxHotel.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxHotel.BorderRadius = 15;
+            this.comboBoxHotel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxHotel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHotel.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxHotel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxHotel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxHotel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxHotel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxHotel.ItemHeight = 30;
+            this.comboBoxHotel.Items.AddRange(new object[] {
+            "Tanger",
+            "Casablanca",
+            "Khouribga",
+            "Marrakech",
+            "Errachidia",
+            "Tetouan",
+            "Essaouira",
+            "Rabat"});
+            this.comboBoxHotel.Location = new System.Drawing.Point(227, 25);
+            this.comboBoxHotel.Name = "comboBoxHotel";
+            this.comboBoxHotel.Size = new System.Drawing.Size(264, 36);
+            this.comboBoxHotel.TabIndex = 32;
             // 
             // dataGridViewRooms
             // 
@@ -166,7 +192,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(6, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 19);
@@ -178,34 +204,12 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 42);
+            this.label1.Location = new System.Drawing.Point(165, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 19);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ville";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // comboBoxHotel
-            // 
-            this.comboBoxHotel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxHotel.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.comboBoxHotel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBoxHotel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxHotel.FormattingEnabled = true;
-            this.comboBoxHotel.Items.AddRange(new object[] {
-            "Tanger",
-            "Casablanca",
-            "Khouribga",
-            "Marrakech",
-            "Errachidia",
-            "Tetouan",
-            "Essaouira",
-            "Rabat"});
-            this.comboBoxHotel.Location = new System.Drawing.Point(108, 38);
-            this.comboBoxHotel.Name = "comboBoxHotel";
-            this.comboBoxHotel.Size = new System.Drawing.Size(240, 29);
-            this.comboBoxHotel.TabIndex = 8;
             // 
             // tabPageHotel
             // 
@@ -218,18 +222,6 @@
             this.tabPageHotel.Text = "Hotels";
             this.tabPageHotel.UseVisualStyleBackColor = true;
             this.tabPageHotel.Enter += new System.EventHandler(this.tabPageHotel_Enter);
-            // 
-            // tabPagecat
-            // 
-            this.tabPagecat.Controls.Add(this.dataGridViewCat);
-            this.tabPagecat.Location = new System.Drawing.Point(4, 4);
-            this.tabPagecat.Name = "tabPagecat";
-            this.tabPagecat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagecat.Size = new System.Drawing.Size(961, 326);
-            this.tabPagecat.TabIndex = 2;
-            this.tabPagecat.Text = "Categories";
-            this.tabPagecat.UseVisualStyleBackColor = true;
-            this.tabPagecat.Enter += new System.EventHandler(this.tabPagecat_Enter);
             // 
             // dataGridViewHotels
             // 
@@ -277,6 +269,18 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // tabPagecat
+            // 
+            this.tabPagecat.Controls.Add(this.dataGridViewCat);
+            this.tabPagecat.Location = new System.Drawing.Point(4, 4);
+            this.tabPagecat.Name = "tabPagecat";
+            this.tabPagecat.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagecat.Size = new System.Drawing.Size(961, 326);
+            this.tabPagecat.TabIndex = 2;
+            this.tabPagecat.Text = "Categories";
+            this.tabPagecat.UseVisualStyleBackColor = true;
+            this.tabPagecat.Enter += new System.EventHandler(this.tabPagecat_Enter);
             // 
             // dataGridViewCat
             // 
@@ -332,8 +336,8 @@
             this.tabPageSearchRooms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).EndInit();
             this.tabPageHotel.ResumeLayout(false);
-            this.tabPagecat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHotels)).EndInit();
+            this.tabPagecat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCat)).EndInit();
             this.ResumeLayout(false);
 
@@ -345,10 +349,8 @@
         private System.Windows.Forms.TabPage tabPageSearchRooms;
         private System.Windows.Forms.TabPage tabPageHotel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxHotel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewRooms;
-        private System.Windows.Forms.Button buttonSearchRoom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -364,5 +366,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxHotel;
     }
 }

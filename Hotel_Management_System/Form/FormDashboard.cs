@@ -29,7 +29,7 @@ namespace Hotel_Management_System
         private void FormDashboard_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            labelUsername.Text = Username;
+            labelUsername1.Text = Username;
             userControlDashboard1.Show();
 
         }
@@ -146,6 +146,31 @@ namespace Hotel_Management_System
             userControlSetting1.Hide();
             userControlBill1.Clear();
             userControlBill1.Show();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void userControlBill1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

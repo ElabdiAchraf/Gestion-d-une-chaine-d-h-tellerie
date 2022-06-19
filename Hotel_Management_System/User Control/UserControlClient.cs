@@ -13,7 +13,7 @@ namespace Hotel_Management_System.User_Control
 {
     public partial class UserControlClient : UserControl
     {
-        static string strConnString = "server=localhost;port=5432;user id=postgres;password=saad;database=Hotel_Management_System";
+        static string strConnString = "server=localhost;port=5432;user id=postgres;password=postgresPW;database=postgresDB";
         //NpgsqlConnection db;
         n.NpgsqlConnection cnx = new n.NpgsqlConnection(strConnString);
         n.NpgsqlCommand cmd;

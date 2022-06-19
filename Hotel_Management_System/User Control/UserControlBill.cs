@@ -16,8 +16,7 @@ namespace Hotel_Management_System.User_Control
     public partial class UserControlBill : UserControl
     {
 
-        static string strConnString = "server=localhost;port=5432;user id=postgres;password=saad;database=Hotel_Management_System";
-        //NpgsqlConnection db;
+        static string strConnString = "server=localhost;port=5432;user id=postgres;password=postgresPW;database=postgresDB";        //NpgsqlConnection db;
         n.NpgsqlConnection cnx = new n.NpgsqlConnection(strConnString);
         n.NpgsqlCommand cmd;
         n.NpgsqlDataAdapter ada;
@@ -149,6 +148,87 @@ namespace Hotel_Management_System.User_Control
         private void dataGridViewPrint_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            cmd = new n.NpgsqlCommand();
+            cmd.Connection = cnx;
+            cmd.CommandText = "SELECT idbill, bills.idreservation , breakfastprice ,gymprice, dinnerprice, launchprice, total , reservation.price  FROM public.bills JOIN public.reservation ON bills.idreservation = reservation.idreservation WHERE idbill=" + textBoxBill.Text + ";";
+            ada = new n.NpgsqlDataAdapter(cmd);
+            ada.Fill(dt);
+            dataGridViewPrint.DataSource = dt;
+            this.total = int.Parse(dt.Rows[0][7].ToString());
+
+        }
+
+        private void buttonGetReservation_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdd_Click_1(object sender, EventArgs e)
+        {
+            if (textBoxBreakfast.Text.Trim() == String.Empty || textBoxLaunch.Text.Trim() == String.Empty ||
+              textBoxDinner.Text.Trim() == String.Empty || textGymPrice.Text.Trim() == String.Empty ||
+              textBoxIdReservation.Text.Trim() == String.Empty)
+                MessageBox.Show("Please fill out all fields", "Require all field", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                cmd = new n.NpgsqlCommand();
+                cmd.Connection = cnx;
+                cmd.CommandText = "INSERT INTO public.bills(idreservation,breakfastprice,gymprice,dinnerprice,launchprice,total) VALUES(@idreservation,@breakfastprice,@gymprice,@dinnerprice,@launchprice,@total)";
+                cmd.Parameters.AddWithValue("idreservation", int.Parse(textBoxIdReservation.Text));
+                cmd.Parameters.AddWithValue("breakfastprice", int.Parse(textBoxBreakfast.Text));
+                cmd.Parameters.AddWithValue("gymprice", int.Parse(textGymPrice.Text));
+                cmd.Parameters.AddWithValue("dinnerprice", int.Parse(textBoxDinner.Text));
+                cmd.Parameters.AddWithValue("launchprice", int.Parse(textBoxLaunch.Text));
+                cmd.Parameters.AddWithValue("total", int.Parse(textBoxLaunch.Text) + int.Parse(textBoxBreakfast.Text) + int.Parse(textGymPrice.Text) + int.Parse(textBoxDinner.Text) + this.priceroom);
+
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Bill added Succesfuly", "Bill added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Clear();
+
+            }
+        }
+
+        private void tabPageAddBill_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPagePrintBill_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPrint_Click_1(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "LSI HOTEL BILL";
+            printer.SubTitle = string.Format(DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt"));
+            printer.PrinterName = "Total Price: " + this.total.ToString();
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.ColumnWidth = DGVPrinter.ColumnWidthSetting.Porportional;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+
+            printer.Footer = "Total Price: " + this.total.ToString() + " DH";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dataGridViewPrint);
         }
     }
 }

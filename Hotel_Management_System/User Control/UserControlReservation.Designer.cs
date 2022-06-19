@@ -30,9 +30,9 @@
         {
             this.tabControlAddReservation = new System.Windows.Forms.TabControl();
             this.tabPageSearchReservation = new System.Windows.Forms.TabPage();
-            this.textBoSearchClient = new System.Windows.Forms.TextBox();
+            this.buttonGetReservation = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxIdReservation = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.buttonSearchReservation = new System.Windows.Forms.Button();
             this.dataGridViewReservation = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +75,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPageArchive = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
             this.dataGridViewArchive = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +86,6 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label17 = new System.Windows.Forms.Label();
             this.tabControlAddReservation.SuspendLayout();
             this.tabPageSearchReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservation)).BeginInit();
@@ -111,9 +111,9 @@
             // 
             // tabPageSearchReservation
             // 
-            this.tabPageSearchReservation.Controls.Add(this.textBoSearchClient);
+            this.tabPageSearchReservation.Controls.Add(this.buttonGetReservation);
+            this.tabPageSearchReservation.Controls.Add(this.textBoxIdReservation);
             this.tabPageSearchReservation.Controls.Add(this.label8);
-            this.tabPageSearchReservation.Controls.Add(this.buttonSearchReservation);
             this.tabPageSearchReservation.Controls.Add(this.dataGridViewReservation);
             this.tabPageSearchReservation.Controls.Add(this.label7);
             this.tabPageSearchReservation.Location = new System.Drawing.Point(4, 4);
@@ -123,15 +123,47 @@
             this.tabPageSearchReservation.TabIndex = 0;
             this.tabPageSearchReservation.Text = "Search Reservation";
             this.tabPageSearchReservation.UseVisualStyleBackColor = true;
+            this.tabPageSearchReservation.Click += new System.EventHandler(this.tabPageSearchReservation_Click);
             this.tabPageSearchReservation.Enter += new System.EventHandler(this.tabPageSearchReservation_Enter);
             // 
-            // textBoSearchClient
+            // buttonGetReservation
             // 
-            this.textBoSearchClient.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoSearchClient.Location = new System.Drawing.Point(148, 35);
-            this.textBoSearchClient.Name = "textBoSearchClient";
-            this.textBoSearchClient.Size = new System.Drawing.Size(240, 28);
-            this.textBoSearchClient.TabIndex = 19;
+            this.buttonGetReservation.BorderRadius = 15;
+            this.buttonGetReservation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonGetReservation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonGetReservation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonGetReservation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonGetReservation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonGetReservation.ForeColor = System.Drawing.Color.White;
+            this.buttonGetReservation.Location = new System.Drawing.Point(421, 31);
+            this.buttonGetReservation.Name = "buttonGetReservation";
+            this.buttonGetReservation.Size = new System.Drawing.Size(172, 44);
+            this.buttonGetReservation.TabIndex = 33;
+            this.buttonGetReservation.Text = "Search";
+            this.buttonGetReservation.Click += new System.EventHandler(this.buttonGetReservation_Click);
+            // 
+            // textBoxIdReservation
+            // 
+            this.textBoxIdReservation.Animated = true;
+            this.textBoxIdReservation.BorderRadius = 15;
+            this.textBoxIdReservation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxIdReservation.DefaultText = "";
+            this.textBoxIdReservation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxIdReservation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxIdReservation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxIdReservation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxIdReservation.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxIdReservation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxIdReservation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxIdReservation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxIdReservation.Location = new System.Drawing.Point(151, 31);
+            this.textBoxIdReservation.Name = "textBoxIdReservation";
+            this.textBoxIdReservation.PasswordChar = '\0';
+            this.textBoxIdReservation.PlaceholderText = "search";
+            this.textBoxIdReservation.SelectedText = "";
+            this.textBoxIdReservation.Size = new System.Drawing.Size(240, 42);
+            this.textBoxIdReservation.TabIndex = 32;
+            this.textBoxIdReservation.TextChanged += new System.EventHandler(this.textBoxIdReservation_TextChanged);
             // 
             // label8
             // 
@@ -143,22 +175,6 @@
             this.label8.Size = new System.Drawing.Size(77, 19);
             this.label8.TabIndex = 18;
             this.label8.Text = "Client ID";
-            // 
-            // buttonSearchReservation
-            // 
-            this.buttonSearchReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSearchReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.buttonSearchReservation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSearchReservation.FlatAppearance.BorderSize = 0;
-            this.buttonSearchReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearchReservation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearchReservation.ForeColor = System.Drawing.Color.White;
-            this.buttonSearchReservation.Location = new System.Drawing.Point(405, 31);
-            this.buttonSearchReservation.Name = "buttonSearchReservation";
-            this.buttonSearchReservation.Size = new System.Drawing.Size(123, 34);
-            this.buttonSearchReservation.TabIndex = 14;
-            this.buttonSearchReservation.Text = "Search";
-            this.buttonSearchReservation.UseVisualStyleBackColor = false;
             // 
             // dataGridViewReservation
             // 
@@ -248,7 +264,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.label7.Location = new System.Drawing.Point(6, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 19);
@@ -359,7 +375,7 @@
             // buttonAddReservation
             // 
             this.buttonAddReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.buttonAddReservation.BackColor = System.Drawing.Color.Coral;
             this.buttonAddReservation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddReservation.FlatAppearance.BorderSize = 0;
             this.buttonAddReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -459,7 +475,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 19);
@@ -493,7 +509,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.label14.ForeColor = System.Drawing.Color.Coral;
             this.label14.Location = new System.Drawing.Point(3, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(253, 19);
@@ -559,7 +575,7 @@
             // buttonUpdate
             // 
             this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.buttonUpdate.BackColor = System.Drawing.Color.Coral;
             this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUpdate.FlatAppearance.BorderSize = 0;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -647,6 +663,17 @@
             this.tabPageArchive.Text = "Archive";
             this.tabPageArchive.UseVisualStyleBackColor = true;
             this.tabPageArchive.Enter += new System.EventHandler(this.tabPageArchive_Enter);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(269, 31);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(382, 19);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "This page contains all reservations > 6 months";
             // 
             // dataGridViewArchive
             // 
@@ -740,17 +767,6 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(269, 31);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(382, 19);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "This page contains all reservations > 6 months";
-            // 
             // UserControlReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -797,9 +813,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridViewReservation;
-        private System.Windows.Forms.TextBox textBoSearchClient;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button buttonSearchReservation;
         private System.Windows.Forms.DateTimePicker dateTimePickerOut1;
         private System.Windows.Forms.DateTimePicker dateTimePickerIn1;
         private System.Windows.Forms.ComboBox comboBoxRoomType1;
@@ -838,5 +852,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Label label17;
+        private Guna.UI2.WinForms.Guna2Button buttonGetReservation;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxIdReservation;
     }
 }

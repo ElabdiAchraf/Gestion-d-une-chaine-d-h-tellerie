@@ -16,7 +16,7 @@ namespace Hotel_Management_System.User_Control
 
 
         private string RID = "", No;
-        static string strConnString = "server=localhost;port=5432;user id=postgres;password=saad;database=Hotel_Management_System";
+        static string strConnString = "server=localhost;port=5432;user id=postgres;password=postgresPW;database=postgresDB";
         //NpgsqlConnection db;
         n.NpgsqlConnection cnx = new n.NpgsqlConnection(strConnString);
         n.NpgsqlCommand cmd;
@@ -238,6 +238,21 @@ namespace Hotel_Management_System.User_Control
             ada = new n.NpgsqlDataAdapter(cmd);
             ada.Fill(dt);
             dataGridViewArchive.DataSource = dt;
+        }
+
+        private void textBoxIdReservation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGetReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPageSearchReservation_Click(object sender, EventArgs e)
+        {
+
         }
 
         public void Clear1()

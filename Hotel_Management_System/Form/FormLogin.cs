@@ -14,7 +14,7 @@ namespace Hotel_Management_System
 {
     public partial class FormLogin : Form
     {
-        static string strConnString = "server=localhost;port=5432;user id=postgres;password=saad;database=Hotel_Management_System";
+        static string strConnString = "server=localhost;port=5432;user id=postgres;password=postgresPW;database=postgresDB";
         //NpgsqlConnection db;
         n.NpgsqlConnection cnx = new n.NpgsqlConnection(strConnString);
         n.NpgsqlCommand cmd;
@@ -53,15 +53,7 @@ namespace Hotel_Management_System
 
         }
 
-        private void pictureBoxMinimize_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pictureBoxMinimize, "Minimize");
-        }
-
-        private void pictureBoxClose_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pictureBoxClose, "Close");
-        }
+       
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
@@ -70,7 +62,7 @@ namespace Hotel_Management_System
 
         private void pictureBoxMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -85,12 +77,38 @@ namespace Hotel_Management_System
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+           
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
             cnx.Open();
-            
-           // bool check = db.IsValidNamePass(textBoxUsername.Text.Trim(), textBoxPassword.Text.Trim());
+
+            // bool check = db.IsValidNamePass(textBoxUsername.Text.Trim(), textBoxPassword.Text.Trim());
 
             if (textBoxUsername.Text.Trim() == string.Empty || textBoxPassword.Text.Trim() == String.Empty)
-                MessageBox.Show("Please fill out all field","Required field",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Please fill out all field", "Required field", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 /*
@@ -101,10 +119,10 @@ namespace Hotel_Management_System
                 ada.Fill(dt);
                 MessageBox.Show("Welcome " + textBoxUsername.Text, "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FormDashboard fd = new FormDashboard();
-                    fd.Username = textBoxUsername.Text;
-                    textBoxUsername.Clear();
-                    textBoxPassword.Clear();
-                    fd.Show();
+                fd.Username = textBoxUsername.Text;
+                textBoxUsername.Clear();
+                textBoxPassword.Clear();
+                fd.Show();
                 /*
                 }
                 else MessageBox.Show("Invalid Username or Password", "Username or Password ", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -115,6 +133,35 @@ namespace Hotel_Management_System
             // fd.Show();
 
             cnx.Close();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
 
         }
     }

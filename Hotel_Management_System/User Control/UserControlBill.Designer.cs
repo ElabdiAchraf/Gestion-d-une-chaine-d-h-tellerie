@@ -30,18 +30,18 @@
         {
             this.tabControlBill = new System.Windows.Forms.TabControl();
             this.tabPageAddBill = new System.Windows.Forms.TabPage();
-            this.buttonGetReservation = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.textGymPrice = new System.Windows.Forms.TextBox();
+            this.buttonAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonGetReservation = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxDinner = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxBreakfast = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textGymPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxLaunch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxIdReservation = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxDinner = new System.Windows.Forms.TextBox();
-            this.textBoxBreakfast = new System.Windows.Forms.TextBox();
-            this.textBoxLaunch = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxIdReservation = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,9 +55,9 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPagePrintBill = new System.Windows.Forms.TabPage();
-            this.buttonPrint = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBoxBill = new System.Windows.Forms.TextBox();
+            this.buttonPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxBill = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridViewPrint = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,18 +91,18 @@
             // 
             // tabPageAddBill
             // 
-            this.tabPageAddBill.Controls.Add(this.buttonGetReservation);
             this.tabPageAddBill.Controls.Add(this.buttonAdd);
-            this.tabPageAddBill.Controls.Add(this.textGymPrice);
-            this.tabPageAddBill.Controls.Add(this.label3);
+            this.tabPageAddBill.Controls.Add(this.buttonGetReservation);
             this.tabPageAddBill.Controls.Add(this.textBoxDinner);
             this.tabPageAddBill.Controls.Add(this.textBoxBreakfast);
+            this.tabPageAddBill.Controls.Add(this.textGymPrice);
             this.tabPageAddBill.Controls.Add(this.textBoxLaunch);
+            this.tabPageAddBill.Controls.Add(this.textBoxIdReservation);
+            this.tabPageAddBill.Controls.Add(this.label3);
             this.tabPageAddBill.Controls.Add(this.label8);
             this.tabPageAddBill.Controls.Add(this.label5);
             this.tabPageAddBill.Controls.Add(this.labelTotal);
             this.tabPageAddBill.Controls.Add(this.label6);
-            this.tabPageAddBill.Controls.Add(this.textBoxIdReservation);
             this.tabPageAddBill.Controls.Add(this.label4);
             this.tabPageAddBill.Controls.Add(this.label2);
             this.tabPageAddBill.Controls.Add(this.label1);
@@ -113,48 +113,149 @@
             this.tabPageAddBill.TabIndex = 0;
             this.tabPageAddBill.Text = "Add Bill";
             this.tabPageAddBill.UseVisualStyleBackColor = true;
-            // 
-            // buttonGetReservation
-            // 
-            this.buttonGetReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonGetReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.buttonGetReservation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGetReservation.FlatAppearance.BorderSize = 0;
-            this.buttonGetReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGetReservation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetReservation.ForeColor = System.Drawing.Color.White;
-            this.buttonGetReservation.Location = new System.Drawing.Point(350, 49);
-            this.buttonGetReservation.Name = "buttonGetReservation";
-            this.buttonGetReservation.Size = new System.Drawing.Size(58, 34);
-            this.buttonGetReservation.TabIndex = 25;
-            this.buttonGetReservation.Text = "Get";
-            this.buttonGetReservation.UseVisualStyleBackColor = false;
-            this.buttonGetReservation.Click += new System.EventHandler(this.buttonGetReservation_Click);
+            this.tabPageAddBill.Click += new System.EventHandler(this.tabPageAddBill_Click);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAdd.FlatAppearance.BorderSize = 0;
-            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.BorderRadius = 15;
+            this.buttonAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(432, 265);
+            this.buttonAdd.Location = new System.Drawing.Point(783, 274);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(123, 34);
-            this.buttonAdd.TabIndex = 25;
-            this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.buttonAdd.Size = new System.Drawing.Size(134, 44);
+            this.buttonAdd.TabIndex = 32;
+            this.buttonAdd.Text = "ADD";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click_1);
+            // 
+            // buttonGetReservation
+            // 
+            this.buttonGetReservation.BorderRadius = 15;
+            this.buttonGetReservation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonGetReservation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonGetReservation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonGetReservation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonGetReservation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonGetReservation.ForeColor = System.Drawing.Color.White;
+            this.buttonGetReservation.Location = new System.Drawing.Point(375, 49);
+            this.buttonGetReservation.Name = "buttonGetReservation";
+            this.buttonGetReservation.Size = new System.Drawing.Size(172, 44);
+            this.buttonGetReservation.TabIndex = 31;
+            this.buttonGetReservation.Text = "GET";
+            this.buttonGetReservation.Click += new System.EventHandler(this.buttonGetReservation_Click_1);
+            // 
+            // textBoxDinner
+            // 
+            this.textBoxDinner.Animated = true;
+            this.textBoxDinner.BorderRadius = 15;
+            this.textBoxDinner.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxDinner.DefaultText = "";
+            this.textBoxDinner.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxDinner.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxDinner.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxDinner.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxDinner.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxDinner.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxDinner.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxDinner.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxDinner.Location = new System.Drawing.Point(672, 176);
+            this.textBoxDinner.Name = "textBoxDinner";
+            this.textBoxDinner.PasswordChar = '\0';
+            this.textBoxDinner.PlaceholderText = "Dinner Price";
+            this.textBoxDinner.SelectedText = "";
+            this.textBoxDinner.Size = new System.Drawing.Size(245, 50);
+            this.textBoxDinner.TabIndex = 30;
+            // 
+            // textBoxBreakfast
+            // 
+            this.textBoxBreakfast.Animated = true;
+            this.textBoxBreakfast.BorderRadius = 15;
+            this.textBoxBreakfast.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxBreakfast.DefaultText = "";
+            this.textBoxBreakfast.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxBreakfast.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxBreakfast.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxBreakfast.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxBreakfast.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxBreakfast.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxBreakfast.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxBreakfast.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxBreakfast.Location = new System.Drawing.Point(375, 178);
+            this.textBoxBreakfast.Name = "textBoxBreakfast";
+            this.textBoxBreakfast.PasswordChar = '\0';
+            this.textBoxBreakfast.PlaceholderText = "Beakfast Price";
+            this.textBoxBreakfast.SelectedText = "";
+            this.textBoxBreakfast.Size = new System.Drawing.Size(258, 48);
+            this.textBoxBreakfast.TabIndex = 28;
             // 
             // textGymPrice
             // 
-            this.textGymPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textGymPrice.Location = new System.Drawing.Point(673, 49);
+            this.textGymPrice.Animated = true;
+            this.textGymPrice.BorderRadius = 15;
+            this.textGymPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textGymPrice.DefaultText = "";
+            this.textGymPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textGymPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textGymPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textGymPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textGymPrice.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.textGymPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textGymPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textGymPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textGymPrice.Location = new System.Drawing.Point(672, 49);
             this.textGymPrice.Name = "textGymPrice";
-            this.textGymPrice.Size = new System.Drawing.Size(240, 32);
-            this.textGymPrice.TabIndex = 18;
+            this.textGymPrice.PasswordChar = '\0';
+            this.textGymPrice.PlaceholderText = "Gym Price";
+            this.textGymPrice.SelectedText = "";
+            this.textGymPrice.Size = new System.Drawing.Size(245, 43);
+            this.textGymPrice.TabIndex = 29;
+            // 
+            // textBoxLaunch
+            // 
+            this.textBoxLaunch.Animated = true;
+            this.textBoxLaunch.BorderRadius = 15;
+            this.textBoxLaunch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxLaunch.DefaultText = "";
+            this.textBoxLaunch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxLaunch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxLaunch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxLaunch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxLaunch.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxLaunch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxLaunch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxLaunch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxLaunch.Location = new System.Drawing.Point(93, 178);
+            this.textBoxLaunch.Name = "textBoxLaunch";
+            this.textBoxLaunch.PasswordChar = '\0';
+            this.textBoxLaunch.PlaceholderText = "Launch Price";
+            this.textBoxLaunch.SelectedText = "";
+            this.textBoxLaunch.Size = new System.Drawing.Size(240, 48);
+            this.textBoxLaunch.TabIndex = 27;
+            // 
+            // textBoxIdReservation
+            // 
+            this.textBoxIdReservation.Animated = true;
+            this.textBoxIdReservation.BorderRadius = 15;
+            this.textBoxIdReservation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxIdReservation.DefaultText = "";
+            this.textBoxIdReservation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxIdReservation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxIdReservation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxIdReservation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxIdReservation.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxIdReservation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxIdReservation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxIdReservation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxIdReservation.Location = new System.Drawing.Point(93, 49);
+            this.textBoxIdReservation.Name = "textBoxIdReservation";
+            this.textBoxIdReservation.PasswordChar = '\0';
+            this.textBoxIdReservation.PlaceholderText = "ID Reservation";
+            this.textBoxIdReservation.SelectedText = "";
+            this.textBoxIdReservation.Size = new System.Drawing.Size(240, 42);
+            this.textBoxIdReservation.TabIndex = 26;
             // 
             // label3
             // 
@@ -167,36 +268,12 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Gym Price";
             // 
-            // textBoxDinner
-            // 
-            this.textBoxDinner.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDinner.Location = new System.Drawing.Point(673, 123);
-            this.textBoxDinner.Name = "textBoxDinner";
-            this.textBoxDinner.Size = new System.Drawing.Size(240, 32);
-            this.textBoxDinner.TabIndex = 20;
-            // 
-            // textBoxBreakfast
-            // 
-            this.textBoxBreakfast.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxBreakfast.Location = new System.Drawing.Point(393, 123);
-            this.textBoxBreakfast.Name = "textBoxBreakfast";
-            this.textBoxBreakfast.Size = new System.Drawing.Size(240, 32);
-            this.textBoxBreakfast.TabIndex = 21;
-            // 
-            // textBoxLaunch
-            // 
-            this.textBoxLaunch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxLaunch.Location = new System.Drawing.Point(104, 123);
-            this.textBoxLaunch.Name = "textBoxLaunch";
-            this.textBoxLaunch.Size = new System.Drawing.Size(240, 32);
-            this.textBoxLaunch.TabIndex = 23;
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(669, 94);
+            this.label8.Location = new System.Drawing.Point(668, 134);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 19);
             this.label8.TabIndex = 13;
@@ -207,7 +284,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(389, 94);
+            this.label5.Location = new System.Drawing.Point(387, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 19);
             this.label5.TabIndex = 14;
@@ -218,7 +295,7 @@
             this.labelTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(469, 221);
+            this.labelTotal.Location = new System.Drawing.Point(471, 274);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(19, 19);
             this.labelTotal.TabIndex = 15;
@@ -229,26 +306,18 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(428, 190);
+            this.label6.Location = new System.Drawing.Point(230, 274);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 19);
             this.label6.TabIndex = 15;
             this.label6.Text = "Total (MAD)";
-            // 
-            // textBoxIdReservation
-            // 
-            this.textBoxIdReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxIdReservation.Location = new System.Drawing.Point(104, 49);
-            this.textBoxIdReservation.Name = "textBoxIdReservation";
-            this.textBoxIdReservation.Size = new System.Drawing.Size(240, 32);
-            this.textBoxIdReservation.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 94);
+            this.label4.Location = new System.Drawing.Point(100, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 19);
             this.label4.TabIndex = 16;
@@ -269,12 +338,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(6, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "Add Bill:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPageSearchBill
             // 
@@ -377,52 +447,66 @@
             this.tabPagePrintBill.TabIndex = 2;
             this.tabPagePrintBill.Text = "Print Bill";
             this.tabPagePrintBill.UseVisualStyleBackColor = true;
+            this.tabPagePrintBill.Click += new System.EventHandler(this.tabPagePrintBill_Click);
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.buttonPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPrint.FlatAppearance.BorderSize = 0;
-            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPrint.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.BorderRadius = 15;
+            this.buttonPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonPrint.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint.Location = new System.Drawing.Point(426, 269);
+            this.buttonPrint.Location = new System.Drawing.Point(390, 259);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(123, 34);
-            this.buttonPrint.TabIndex = 27;
+            this.buttonPrint.Size = new System.Drawing.Size(261, 50);
+            this.buttonPrint.TabIndex = 33;
             this.buttonPrint.Text = "Print";
-            this.buttonPrint.UseVisualStyleBackColor = false;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click_1);
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BorderRadius = 15;
+            this.button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(426, 21);
+            this.button1.Location = new System.Drawing.Point(426, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 34);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Get";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Size = new System.Drawing.Size(172, 44);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "GET";
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBoxBill
             // 
-            this.textBoxBill.Location = new System.Drawing.Point(235, 23);
+            this.textBoxBill.Animated = true;
+            this.textBoxBill.BorderRadius = 15;
+            this.textBoxBill.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxBill.DefaultText = "";
+            this.textBoxBill.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxBill.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxBill.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxBill.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxBill.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxBill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxBill.Location = new System.Drawing.Point(171, 13);
             this.textBoxBill.Name = "textBoxBill";
-            this.textBoxBill.Size = new System.Drawing.Size(185, 32);
-            this.textBoxBill.TabIndex = 15;
+            this.textBoxBill.PasswordChar = '\0';
+            this.textBoxBill.PlaceholderText = "ID Bill";
+            this.textBoxBill.SelectedText = "";
+            this.textBoxBill.Size = new System.Drawing.Size(240, 42);
+            this.textBoxBill.TabIndex = 28;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(105, 26);
+            this.label9.Location = new System.Drawing.Point(87, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 23);
             this.label9.TabIndex = 14;
@@ -541,16 +625,10 @@
         private System.Windows.Forms.TabPage tabPageAddBill;
         private System.Windows.Forms.TabPage tabPageSearchBill;
         private System.Windows.Forms.TabPage tabPagePrintBill;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.TextBox textGymPrice;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxDinner;
-        private System.Windows.Forms.TextBox textBoxBreakfast;
-        private System.Windows.Forms.TextBox textBoxLaunch;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxIdReservation;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -563,7 +641,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridView dataGridViewPrint;
-        private System.Windows.Forms.Button buttonGetReservation;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -573,9 +650,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.TextBox textBoxBill;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button buttonPrint;
-        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxBreakfast;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxLaunch;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxIdReservation;
+        private Guna.UI2.WinForms.Guna2TextBox textGymPrice;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxDinner;
+        private Guna.UI2.WinForms.Guna2Button buttonAdd;
+        private Guna.UI2.WinForms.Guna2Button buttonGetReservation;
+        private Guna.UI2.WinForms.Guna2Button buttonPrint;
+        private Guna.UI2.WinForms.Guna2Button button1;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxBill;
     }
 }

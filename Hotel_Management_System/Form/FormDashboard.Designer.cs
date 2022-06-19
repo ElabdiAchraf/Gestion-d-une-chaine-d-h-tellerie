@@ -31,48 +31,48 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSlide = new System.Windows.Forms.Panel();
-            this.buttonSetting = new System.Windows.Forms.Button();
-            this.buttonReservation = new System.Windows.Forms.Button();
-            this.buttonRoom = new System.Windows.Forms.Button();
-            this.buttonClient = new System.Windows.Forms.Button();
-            this.buttonFacture = new System.Windows.Forms.Button();
-            this.buttonDashboard = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.labelDateTime = new System.Windows.Forms.Label();
-            this.linkLabelLogOut = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.userControlBill1 = new Hotel_Management_System.User_Control.UserControlBill();
             this.userControlDashboard1 = new Hotel_Management_System.User_Control.UserControlDashboard();
             this.userControlReservation1 = new Hotel_Management_System.User_Control.UserControlReservation();
             this.userControlRoom1 = new Hotel_Management_System.User_Control.UserControlRoom();
             this.userControlClient1 = new Hotel_Management_System.User_Control.UserControlClient();
             this.userControlSetting1 = new Hotel_Management_System.User_Control.UserControlSetting();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.linkLabelLogOut = new System.Windows.Forms.LinkLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.buttonSetting = new System.Windows.Forms.Button();
+            this.buttonReservation = new System.Windows.Forms.Button();
+            this.buttonRoom = new System.Windows.Forms.Button();
+            this.buttonClient = new System.Windows.Forms.Button();
+            this.buttonFacture = new System.Windows.Forms.Button();
+            this.buttonDashboard = new System.Windows.Forms.Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labelUsername1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.panel1.BackColor = System.Drawing.Color.Coral;
+            this.panel1.Controls.Add(this.guna2HtmlLabel3);
             this.panel1.Controls.Add(this.panelSlide);
             this.panel1.Controls.Add(this.buttonSetting);
             this.panel1.Controls.Add(this.buttonReservation);
@@ -80,7 +80,6 @@
             this.panel1.Controls.Add(this.buttonClient);
             this.panel1.Controls.Add(this.buttonFacture);
             this.panel1.Controls.Add(this.buttonDashboard);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -94,6 +93,204 @@
             this.panelSlide.Name = "panelSlide";
             this.panelSlide.Size = new System.Drawing.Size(11, 50);
             this.panelSlide.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.labelDateTime);
+            this.panel2.Controls.Add(this.guna2HtmlLabel2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(291, 633);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1075, 87);
+            this.panel2.TabIndex = 0;
+            // 
+            // labelDateTime
+            // 
+            this.labelDateTime.AutoSize = true;
+            this.labelDateTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDateTime.ForeColor = System.Drawing.Color.Coral;
+            this.labelDateTime.Location = new System.Drawing.Point(39, 22);
+            this.labelDateTime.Name = "labelDateTime";
+            this.labelDateTime.Size = new System.Drawing.Size(21, 23);
+            this.labelDateTime.TabIndex = 0;
+            this.labelDateTime.Text = "?";
+            this.labelDateTime.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.userControlBill1);
+            this.panel6.Controls.Add(this.userControlDashboard1);
+            this.panel6.Controls.Add(this.userControlReservation1);
+            this.panel6.Controls.Add(this.userControlRoom1);
+            this.panel6.Controls.Add(this.userControlClient1);
+            this.panel6.Controls.Add(this.userControlSetting1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(291, 197);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1075, 436);
+            this.panel6.TabIndex = 0;
+            // 
+            // userControlBill1
+            // 
+            this.userControlBill1.BackColor = System.Drawing.Color.White;
+            this.userControlBill1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlBill1.Location = new System.Drawing.Point(0, 0);
+            this.userControlBill1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlBill1.Name = "userControlBill1";
+            this.userControlBill1.Size = new System.Drawing.Size(1075, 500);
+            this.userControlBill1.TabIndex = 1;
+            this.userControlBill1.Visible = false;
+            this.userControlBill1.Load += new System.EventHandler(this.userControlBill1_Load);
+            // 
+            // userControlDashboard1
+            // 
+            this.userControlDashboard1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userControlDashboard1.BackColor = System.Drawing.Color.White;
+            this.userControlDashboard1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlDashboard1.Location = new System.Drawing.Point(0, 0);
+            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.userControlDashboard1.Name = "userControlDashboard1";
+            this.userControlDashboard1.Size = new System.Drawing.Size(1075, 436);
+            this.userControlDashboard1.TabIndex = 0;
+            this.userControlDashboard1.Visible = false;
+            // 
+            // userControlReservation1
+            // 
+            this.userControlReservation1.BackColor = System.Drawing.Color.White;
+            this.userControlReservation1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlReservation1.Location = new System.Drawing.Point(0, 0);
+            this.userControlReservation1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlReservation1.Name = "userControlReservation1";
+            this.userControlReservation1.Size = new System.Drawing.Size(1075, 436);
+            this.userControlReservation1.TabIndex = 0;
+            this.userControlReservation1.Visible = false;
+            // 
+            // userControlRoom1
+            // 
+            this.userControlRoom1.BackColor = System.Drawing.Color.White;
+            this.userControlRoom1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlRoom1.Location = new System.Drawing.Point(0, 0);
+            this.userControlRoom1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlRoom1.Name = "userControlRoom1";
+            this.userControlRoom1.Size = new System.Drawing.Size(1075, 436);
+            this.userControlRoom1.TabIndex = 0;
+            this.userControlRoom1.Visible = false;
+            // 
+            // userControlClient1
+            // 
+            this.userControlClient1.BackColor = System.Drawing.Color.White;
+            this.userControlClient1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlClient1.Location = new System.Drawing.Point(0, 0);
+            this.userControlClient1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlClient1.Name = "userControlClient1";
+            this.userControlClient1.Size = new System.Drawing.Size(1075, 436);
+            this.userControlClient1.TabIndex = 0;
+            this.userControlClient1.Visible = false;
+            // 
+            // userControlSetting1
+            // 
+            this.userControlSetting1.BackColor = System.Drawing.Color.White;
+            this.userControlSetting1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlSetting1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlSetting1.Location = new System.Drawing.Point(0, 0);
+            this.userControlSetting1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlSetting1.Name = "userControlSetting1";
+            this.userControlSetting1.Size = new System.Drawing.Size(1075, 436);
+            this.userControlSetting1.TabIndex = 0;
+            this.userControlSetting1.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Coral;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(803, 36);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(269, 18);
+            this.guna2HtmlLabel2.TabIndex = 8;
+            this.guna2HtmlLabel2.Text = "created by EL ABDI Achraf|| Copyright © 2022";
+            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.labelUsername1);
+            this.panel5.Controls.Add(this.linkLabelLogOut);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1075, 197);
+            this.panel5.TabIndex = 0;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Coral;
+            this.label4.Location = new System.Drawing.Point(6, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Welcome:";
+            this.label4.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // linkLabelLogOut
+            // 
+            this.linkLabelLogOut.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabelLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelLogOut.AutoSize = true;
+            this.linkLabelLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabelLogOut.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabelLogOut.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabelLogOut.LinkColor = System.Drawing.Color.Coral;
+            this.linkLabelLogOut.Location = new System.Drawing.Point(971, 23);
+            this.linkLabelLogOut.Name = "linkLabelLogOut";
+            this.linkLabelLogOut.Size = new System.Drawing.Size(63, 19);
+            this.linkLabelLogOut.TabIndex = 0;
+            this.linkLabelLogOut.TabStop = true;
+            this.linkLabelLogOut.Text = "Logout";
+            this.linkLabelLogOut.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabelLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogOut_LinkClicked);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.guna2Panel1);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(291, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1075, 197);
+            this.panel4.TabIndex = 0;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(39, 23);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(210, 59);
+            this.guna2HtmlLabel3.TabIndex = 8;
+            this.guna2HtmlLabel3.Text = "LSI HOTEL";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Hotel_Management_System.Properties.Resources._2508;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 186);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // buttonSetting
             // 
@@ -176,7 +373,7 @@
             this.buttonFacture.ForeColor = System.Drawing.Color.White;
             this.buttonFacture.Image = global::Hotel_Management_System.Properties.Resources.bill_32;
             this.buttonFacture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonFacture.Location = new System.Drawing.Point(39, 483);
+            this.buttonFacture.Location = new System.Drawing.Point(39, 501);
             this.buttonFacture.Name = "buttonFacture";
             this.buttonFacture.Size = new System.Drawing.Size(252, 50);
             this.buttonFacture.TabIndex = 6;
@@ -203,255 +400,53 @@
             this.buttonDashboard.UseVisualStyleBackColor = true;
             this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
-            // panel3
+            // guna2Panel1
             // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(291, 197);
-            this.panel3.TabIndex = 1;
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 63);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1072, 147);
+            this.guna2Panel1.TabIndex = 1;
             // 
-            // label3
+            // guna2PictureBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(270, 29);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Management System";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.guna2PictureBox2.Image = global::Hotel_Management_System.Properties.Resources._2508;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(366, -22);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(300, 200);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 2;
+            this.guna2PictureBox2.TabStop = false;
             // 
-            // label2
+            // guna2PictureBox3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(64, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 34);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "YAS Hotel";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.guna2PictureBox3.Image = global::Hotel_Management_System.Properties.Resources._2508;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(716, -22);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(300, 186);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 3;
+            this.guna2PictureBox3.TabStop = false;
             // 
-            // pictureBox3
+            // labelUsername1
             // 
-            this.pictureBox3.Image = global::Hotel_Management_System.Properties.Resources.home_5_128;
-            this.pictureBox3.Location = new System.Drawing.Point(70, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(126, 131);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(291, 197);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(291, 633);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1075, 87);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-4, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(457, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Made by : MESKINI AND AMMOR || Copyright © 2022 ";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.panel4.Controls.Add(this.labelUsername);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(291, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1075, 197);
-            this.panel4.TabIndex = 0;
-            // 
-            // labelUsername
-            // 
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.ForeColor = System.Drawing.Color.White;
-            this.labelUsername.Location = new System.Drawing.Point(140, 125);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(21, 23);
-            this.labelUsername.TabIndex = 0;
-            this.labelUsername.Text = "?";
-            this.labelUsername.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(24, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Welcome:";
-            this.label4.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.labelDateTime);
-            this.panel5.Controls.Add(this.linkLabelLogOut);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1075, 87);
-            this.panel5.TabIndex = 0;
-            // 
-            // labelDateTime
-            // 
-            this.labelDateTime.AutoSize = true;
-            this.labelDateTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDateTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.labelDateTime.Location = new System.Drawing.Point(24, 56);
-            this.labelDateTime.Name = "labelDateTime";
-            this.labelDateTime.Size = new System.Drawing.Size(21, 23);
-            this.labelDateTime.TabIndex = 0;
-            this.labelDateTime.Text = "?";
-            this.labelDateTime.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // linkLabelLogOut
-            // 
-            this.linkLabelLogOut.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabelLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabelLogOut.AutoSize = true;
-            this.linkLabelLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabelLogOut.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabelLogOut.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabelLogOut.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabelLogOut.Location = new System.Drawing.Point(939, 49);
-            this.linkLabelLogOut.Name = "linkLabelLogOut";
-            this.linkLabelLogOut.Size = new System.Drawing.Size(63, 19);
-            this.linkLabelLogOut.TabIndex = 0;
-            this.linkLabelLogOut.TabStop = true;
-            this.linkLabelLogOut.Text = "Logout";
-            this.linkLabelLogOut.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabelLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogOut_LinkClicked);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Hotel_Management_System.Properties.Resources.patron1;
-            this.pictureBox1.Location = new System.Drawing.Point(878, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 67);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.userControlBill1);
-            this.panel6.Controls.Add(this.userControlDashboard1);
-            this.panel6.Controls.Add(this.userControlReservation1);
-            this.panel6.Controls.Add(this.userControlRoom1);
-            this.panel6.Controls.Add(this.userControlClient1);
-            this.panel6.Controls.Add(this.userControlSetting1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(291, 197);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1075, 436);
-            this.panel6.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // userControlBill1
-            // 
-            this.userControlBill1.BackColor = System.Drawing.Color.White;
-            this.userControlBill1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlBill1.Location = new System.Drawing.Point(0, 0);
-            this.userControlBill1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlBill1.Name = "userControlBill1";
-            this.userControlBill1.Size = new System.Drawing.Size(1075, 436);
-            this.userControlBill1.TabIndex = 1;
-            this.userControlBill1.Visible = false;
-            // 
-            // userControlDashboard1
-            // 
-            this.userControlDashboard1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.userControlDashboard1.BackColor = System.Drawing.Color.White;
-            this.userControlDashboard1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlDashboard1.Location = new System.Drawing.Point(0, 0);
-            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.userControlDashboard1.Name = "userControlDashboard1";
-            this.userControlDashboard1.Size = new System.Drawing.Size(1075, 436);
-            this.userControlDashboard1.TabIndex = 0;
-            this.userControlDashboard1.Visible = false;
-            // 
-            // userControlReservation1
-            // 
-            this.userControlReservation1.BackColor = System.Drawing.Color.White;
-            this.userControlReservation1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlReservation1.Location = new System.Drawing.Point(0, 0);
-            this.userControlReservation1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlReservation1.Name = "userControlReservation1";
-            this.userControlReservation1.Size = new System.Drawing.Size(1075, 436);
-            this.userControlReservation1.TabIndex = 0;
-            this.userControlReservation1.Visible = false;
-            // 
-            // userControlRoom1
-            // 
-            this.userControlRoom1.BackColor = System.Drawing.Color.White;
-            this.userControlRoom1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlRoom1.Location = new System.Drawing.Point(0, 0);
-            this.userControlRoom1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlRoom1.Name = "userControlRoom1";
-            this.userControlRoom1.Size = new System.Drawing.Size(1075, 436);
-            this.userControlRoom1.TabIndex = 0;
-            this.userControlRoom1.Visible = false;
-            // 
-            // userControlClient1
-            // 
-            this.userControlClient1.BackColor = System.Drawing.Color.White;
-            this.userControlClient1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlClient1.Location = new System.Drawing.Point(0, 0);
-            this.userControlClient1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlClient1.Name = "userControlClient1";
-            this.userControlClient1.Size = new System.Drawing.Size(1075, 436);
-            this.userControlClient1.TabIndex = 0;
-            this.userControlClient1.Visible = false;
-            // 
-            // userControlSetting1
-            // 
-            this.userControlSetting1.BackColor = System.Drawing.Color.White;
-            this.userControlSetting1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlSetting1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlSetting1.Location = new System.Drawing.Point(0, 0);
-            this.userControlSetting1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControlSetting1.Name = "userControlSetting1";
-            this.userControlSetting1.Size = new System.Drawing.Size(1075, 436);
-            this.userControlSetting1.TabIndex = 0;
-            this.userControlSetting1.Visible = false;
+            this.labelUsername1.BorderRadius = 15;
+            this.labelUsername1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.labelUsername1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.labelUsername1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.labelUsername1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.labelUsername1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername1.ForeColor = System.Drawing.Color.White;
+            this.labelUsername1.Location = new System.Drawing.Point(122, 12);
+            this.labelUsername1.Name = "labelUsername1";
+            this.labelUsername1.Size = new System.Drawing.Size(180, 45);
+            this.labelUsername1.TabIndex = 1;
+            this.labelUsername1.Text = "guna2Button1";
+            this.labelUsername1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // FormDashboard
             // 
@@ -472,18 +467,17 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,25 +485,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabelLogOut;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelDateTime;
         private System.Windows.Forms.Button buttonSetting;
         private System.Windows.Forms.Button buttonReservation;
         private System.Windows.Forms.Button buttonRoom;
         private System.Windows.Forms.Button buttonClient;
         private System.Windows.Forms.Button buttonDashboard;
-        private System.Windows.Forms.Label labelUsername;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panelSlide;
         private System.Windows.Forms.Timer timer1;
@@ -520,5 +502,16 @@
         private User_Control.UserControlDashboard userControlDashboard1;
         private System.Windows.Forms.Button buttonFacture;
         private User_Control.UserControlBill userControlBill1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.LinkLabel linkLabelLogOut;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button labelUsername1;
     }
 }
